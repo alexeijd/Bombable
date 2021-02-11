@@ -28,7 +28,7 @@ Any aircraft that shoots guns or drops bombs can damage the F6F and B-17.  A gre
       <type>aircraft</type>
       <callsign>B17-2</callsign>
 			<name>B17_2</name>
-      <model type="string">AI/Aircraft/B-17-Bombable/Models/b17.xml</model>
+      <model type="string">Aircraft/Scenarios/Aircraft/B-17-Bombable/Models/b17.xml</model>
       <latitude type="double">37.9102</latitude>
 			<longitude type="double">-122.4672</longitude>
 			<altitude type="double">5100</altitude>
@@ -41,7 +41,7 @@ Any aircraft that shoots guns or drops bombs can damage the F6F and B-17.  A gre
       <type>aircraft</type>
       <callsign>B17-1</callsign>
 			<name>B17_1</name>
-      <model type="string">AI/Aircraft/B-17-Bombable/Models/b17.xml</model>
+      <model type="string">Aircraft/Scenarios/Aircraft/B-17-Bombable/Models/b17.xml</model>
       <latitude type="double">37.9104</latitude>
 			<longitude type="double">-122.4676</longitude>
 			<altitude type="double">5100</altitude>
@@ -56,7 +56,7 @@ Any aircraft that shoots guns or drops bombs can damage the F6F and B-17.  A gre
       <type>aircraft</type>
       <callsign>B17-3</callsign>
 			<name>B17_3</name>
-      <model type="string">AI/Aircraft/B-17-Bombable/Models/b17.xml</model>
+      <model type="string">Aircraft/Scenarios/Aircraft/B-17-Bombable/Models/b17.xml</model>
       <latitude type="double">37.9106</latitude>
 			<longitude type="double">-122.4680</longitude>
 			<altitude type="double">5100</altitude>
@@ -69,7 +69,7 @@ Any aircraft that shoots guns or drops bombs can damage the F6F and B-17.  A gre
       <type>aircraft</type>
       <callsign>B17-4</callsign>
 			<name>B17_4</name>
-      <model type="string">AI/Aircraft/B-17-Bombable/Models/b17.xml</model>
+      <model type="string">Aircraft/Scenarios/Aircraft/B-17-Bombable/Models/b17.xml</model>
       <latitude type="double">37.9104</latitude>
 			<longitude type="double">-122.4684</longitude>
 			<altitude type="double">5100</altitude>
@@ -84,7 +84,7 @@ Any aircraft that shoots guns or drops bombs can damage the F6F and B-17.  A gre
       <type>aircraft</type>
       <callsign>B17-6</callsign>
 			<name>B17_6</name>
-      <model type="string">AI/Aircraft/B-17-Bombable/Models/b17.xml</model>
+      <model type="string">Aircraft/Scenarios/Aircraft/B-17-Bombable/Models/b17.xml</model>
       <latitude type="double">37.9102</latitude>
 			<longitude type="double">-122.4688</longitude>
 			<altitude type="double">5100</altitude>
@@ -100,7 +100,7 @@ Any aircraft that shoots guns or drops bombs can damage the F6F and B-17.  A gre
       <type>aircraft</type>
       <callsign>Agate</callsign>
 			<name>F6F21</name>
-      <model type="string">AI/Aircraft/F6F-Hellcat-Bombable/Models/f6f.xml</model>
+      <model type="string">Aircraft/Scenarios/Aircraft/F6F-Hellcat-Bombable/Models/f6f.xml</model>
       <latitude type="double">37.9051097548720</latitude>
 			<longitude type="double">-122.4684</longitude>
 			<altitude type="double">10000</altitude>
@@ -115,7 +115,7 @@ Any aircraft that shoots guns or drops bombs can damage the F6F and B-17.  A gre
       <type>aircraft</type>
       <callsign>Tampa 3</callsign>
 			<name>F6F3</name>
-      <model type="string">AI/Aircraft/F6F-Hellcat-Bombable/Models/f6f-unitedstatesnavy.xml</model>
+      <model type="string">Aircraft/Scenarios/Aircraft/F6F-Hellcat-Bombable/Models/f6f-unitedstatesnavy.xml</model>
       <latitude type="double">37.9051097548720</latitude>
 			<longitude type="double">-122.4676</longitude>
 			<altitude type="double">10000</altitude>
@@ -129,7 +129,7 @@ Any aircraft that shoots guns or drops bombs can damage the F6F and B-17.  A gre
       <type>aircraft</type>
       <callsign>Steele 5</callsign>
 			<name>F6F4</name>
-      <model type="string">AI/Aircraft/F6F-Hellcat-Bombable/Models/f6f-unitedstatesnavy.xml</model>
+      <model type="string">Aircraft/Scenarios/Aircraft/F6F-Hellcat-Bombable/Models/f6f-unitedstatesnavy.xml</model>
       <latitude type="double">37.9051097548720</latitude>
 			<longitude type="double">-122.4672</longitude>
 			<altitude type="double">10000</altitude>
@@ -144,7 +144,7 @@ Any aircraft that shoots guns or drops bombs can damage the F6F and B-17.  A gre
       <type>aircraft</type>
       <callsign>99 Sniper</callsign>
 			<name>F6FA</name>
-      <model type="string">AI/Aircraft/F6F-Hellcat-Bombable/Models/f6f-royalnavy.xml</model>
+      <model type="string">Aircraft/Scenarios/Aircraft/F6F-Hellcat-Bombable/Models/f6f-royalnavy.xml</model>
       <latitude type="double">37.8915</latitude>
 			<longitude type="double">-122.4680</longitude>
 			<altitude type="double">12000</altitude>
@@ -158,7 +158,7 @@ Any aircraft that shoots guns or drops bombs can damage the F6F and B-17.  A gre
       <type>aircraft</type>
       <callsign>Ginger 30</callsign>
 			<name>F6FB</name>
-      <model type="string">AI/Aircraft/F6F-Hellcat-Bombable/Models/f6f-royalnavy.xml</model>
+      <model type="string">Aircraft/Scenarios/Aircraft/F6F-Hellcat-Bombable/Models/f6f-royalnavy.xml</model>
       <latitude type="double">37.8915</latitude>
 			<longitude type="double">-122.4684</longitude>
 			<altitude type="double">12000</altitude>
@@ -172,7 +172,7 @@ Any aircraft that shoots guns or drops bombs can damage the F6F and B-17.  A gre
       <type>aircraft</type>
       <callsign>99 Mohawk</callsign>
 			<name>F6FC</name>
-      <model type="string">AI/Aircraft/F6F-Hellcat-Bombable/Models/f6f-VF-27.xml</model>
+      <model type="string">Aircraft/Scenarios/Aircraft/F6F-Hellcat-Bombable/Models/f6f-VF-27.xml</model>
       <latitude type="double">37.8915</latitude>
 			<longitude type="double">-122.4688</longitude>
 			<altitude type="double">12000</altitude>

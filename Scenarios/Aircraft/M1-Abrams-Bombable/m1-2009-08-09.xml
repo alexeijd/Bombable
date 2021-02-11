@@ -84,7 +84,7 @@
 	
 	<!-- fire animations -->
 	<model>
-		<path>AI/Aircraft/M1-Abrams-Bombable/Models/Effects/fire-particles.xml</path>
+		<path>Aircraft/Scenarios/Aircraft/M1-Abrams-Bombable/Models/Effects/fire-particles.xml</path>
 		<offsets>
 			<x-m>0.0</x-m>
 			<y-m>0.0</y-m>
@@ -367,7 +367,7 @@
         props.globals.getNode ("ai/m1-abrams/init_m1_dialogs", 1).setBoolValue(1); #so we know it's been done
         
         
-        aircraft.m1abrams_dlg_config = gui.Dialog.new("ai/m1-abrams/config/dialog","AI/Aircraft/M1-Abrams-Bombable/Dialogs/config.xml");
+        aircraft.m1abrams_dlg_config = gui.Dialog.new("ai/m1-abrams/config/dialog","Aircraft/Scenarios/Aircraft/M1-Abrams-Bombable/Dialogs/config.xml");
 				
 				#aircraft.m1abrams_dlg_config.toggle();
         

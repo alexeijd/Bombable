@@ -30,7 +30,7 @@ var bombableVersion = "4.7.1";
 #
 # Required: 
 #  1. The Fire-Particles subdirectory (included in this package) 
-#     must be installed in the FG/data/AI/Aircraft/Fire-Particles subdirectory
+#     must be installed in the FG/data/Aircraft/Scenarios/Aircraft/Fire-Particles subdirectory
 #  2. This file, bombable.nas, must be installed in the FG/data/Nasal 
 #     subdirectory
 # 
@@ -213,7 +213,7 @@ var mpreceive = func (mpMessageNode) {
 # it in the right location, speed, direction, and trigger it.
 # Somewhat similar to: http://wiki.flightgear.org/Howto:_Add_contrails#Persistent_Contrails
 
-var put_ballistic_model = func(myNodeName="/ai/models/aircraft", path="AI/Aircraft/Fire-Particles/fast-particles.xml") {
+var put_ballistic_model = func(myNodeName="/ai/models/aircraft", path="Aircraft/Scenarios/Aircraft/Fire-Particles/fast-particles.xml") {
 
   #debprint ("Bombable: setprop 149");
   # "environment" means the main aircraft
@@ -247,7 +247,7 @@ var put_ballistic_model = func(myNodeName="/ai/models/aircraft", path="AI/Aircra
 # particles.  If time_sec is slower than the frame length then you get zero particle.
 # Smallest safe value for time_sec is maybe .3 .4 or .5 seconds.
 # 
-var put_remove_model = func(lat_deg=nil, lon_deg=nil, elev_m=nil, time_sec=nil, startSize_m=nil, endSize_m=1, path="AI/Aircraft/Fire-Particles/flack-impact.xml" ) {
+var put_remove_model = func(lat_deg=nil, lon_deg=nil, elev_m=nil, time_sec=nil, startSize_m=nil, endSize_m=1, path="Aircraft/Scenarios/Aircraft/Fire-Particles/flack-impact.xml" ) {
 
   if (lat_deg==nil or lon_deg==nil or elev_m==nil) { return; } 
  
@@ -318,12 +318,12 @@ var start_terrain_fire = func ( lat_deg, lon_deg, alt_m=0, ballisticMass_lb=1.2 
   }
   
     if (ballisticMass_lb==nil or ballisticMass_lb<0) ballisticMass_lb=1.2;
-    if (ballisticMass_lb < 3 ) { time_sec=20; fp="AI/Aircraft/Fire-Particles/fire-particles-very-very-small.xml"; }
-    elsif (ballisticMass_lb < 20 ) { time_sec=60; fp="AI/Aircraft/Fire-Particles/fire-particles-very-very-small.xml"; }
-		elsif (ballisticMass_lb < 50 ) { time_sec=120; fp="AI/Aircraft/Fire-Particles/fire-particles-very-small.xml"; }
-			elsif (ballisticMass_lb > 450 ) {time_sec=600; fp="AI/Aircraft/Fire-Particles/fire-particles.xml"; }
-			elsif (ballisticMass_lb > 1000 ) { time_sec=900; fp="AI/Aircraft/Fire-Particles/fire-particles-large.xml"; }
-			else {time_sec=300; fp="AI/Aircraft/Fire-Particles/fire-particles-small.xml";} 
+    if (ballisticMass_lb < 3 ) { time_sec=20; fp="Aircraft/Scenarios/Aircraft/Fire-Particles/fire-particles-very-very-small.xml"; }
+    elsif (ballisticMass_lb < 20 ) { time_sec=60; fp="Aircraft/Scenarios/Aircraft/Fire-Particles/fire-particles-very-very-small.xml"; }
+		elsif (ballisticMass_lb < 50 ) { time_sec=120; fp="Aircraft/Scenarios/Aircraft/Fire-Particles/fire-particles-very-small.xml"; }
+			elsif (ballisticMass_lb > 450 ) {time_sec=600; fp="Aircraft/Scenarios/Aircraft/Fire-Particles/fire-particles.xml"; }
+			elsif (ballisticMass_lb > 1000 ) { time_sec=900; fp="Aircraft/Scenarios/Aircraft/Fire-Particles/fire-particles-large.xml"; }
+			else {time_sec=300; fp="Aircraft/Scenarios/Aircraft/Fire-Particles/fire-particles-small.xml";} 
 
   debprint ({lat_deg:lat_deg, lon_deg:lon_deg, elev_m:alt_m, time_sec:time_sec, startSize_m: nil, endSize_m:nil, path:fp });
   put_remove_model(lat_deg:lat_deg, lon_deg:lon_deg, elev_m:alt_m, time_sec:time_sec, startSize_m: nil, endSize_m:nil, path:fp );
@@ -335,13 +335,13 @@ var start_terrain_fire = func ( lat_deg, lon_deg, alt_m=0, ballisticMass_lb=1.2 
   
   ##put it out, but slowly, for large impacts
   if (ballisticMass_lb>50) {
-    time_sec2=120; fp2="AI/Aircraft/Fire-Particles/fire-particles-very-small.xml";  
+    time_sec2=120; fp2="Aircraft/Scenarios/Aircraft/Fire-Particles/fire-particles-very-small.xml";  
     settimer (func { put_remove_model(lat_deg:lat_deg, lon_deg:lon_deg, elev_m:alt_m, time_sec:time_sec2, startSize_m: nil, endSize_m:nil, path:fp2 )} , time_sec);
     
-    time_sec3=120; fp3="AI/Aircraft/Fire-Particles/fire-particles-very-very-small.xml";  
+    time_sec3=120; fp3="Aircraft/Scenarios/Aircraft/Fire-Particles/fire-particles-very-very-small.xml";  
     settimer (func { put_remove_model(lat_deg:lat_deg, lon_deg:lon_deg, elev_m:alt_m, time_sec:time_sec3, startSize_m: nil, endSize_m:nil, path:fp3 )} , time_sec+time_sec2);
     
-    time_sec4=120; fp4="AI/Aircraft/Fire-Particles/fire-particles-very-very-very-small.xml";  
+    time_sec4=120; fp4="Aircraft/Scenarios/Aircraft/Fire-Particles/fire-particles-very-very-very-small.xml";  
     settimer (func { put_remove_model(lat_deg:lat_deg, lon_deg:lon_deg, elev_m:alt_m, time_sec:time_sec4, startSize_m: nil, endSize_m:nil, path:fp4 )} , time_sec+time_sec2+time_sec3);
   
   }
@@ -354,7 +354,7 @@ var start_terrain_fire = func ( lat_deg, lon_deg, alt_m=0, ballisticMass_lb=1.2 
 #put_tied_model places a new model that is tied to another AI model 
 # (given by myNodeName) and will move with it in lon, lat, & alt
 
-var put_tied_model = func(myNodeName="", path="AI/Aircraft/Fire-Particles/Fire-Particles.xml ") {
+var put_tied_model = func(myNodeName="", path="Aircraft/Scenarios/Aircraft/Fire-Particles/Fire-Particles.xml ") {
 
   #debprint ("Bombable: setprop 174"); 
   # "environment" means the main aircraft
@@ -380,7 +380,7 @@ var put_tied_model = func(myNodeName="", path="AI/Aircraft/Fire-Particles/Fire-P
 # and have the delta heading, pitch, lat, long, alt, as specified in weapons_init
 # 
 
-var put_tied_weapon = func(myNodeName="", elem="", startSize_m=.07, endSize_m=.05, path="AI/Aircraft/Fire-Particles/Fire-Particles.xml ") {
+var put_tied_weapon = func(myNodeName="", elem="", startSize_m=.07, endSize_m=.05, path="Aircraft/Scenarios/Aircraft/Fire-Particles/Fire-Particles.xml ") {
 
   #debprint ("Bombable: setprop 174"); 
   # "environment" means the main aircraft
@@ -1076,7 +1076,7 @@ var startFire = func (myNodeName="", model="")
   }  
   
       
-  if (model==nil or model=="") model="AI/Aircraft/Fire-Particles/fire-particles.xml";
+  if (model==nil or model=="") model="Aircraft/Scenarios/Aircraft/Fire-Particles/fire-particles.xml";
   var fireNode=put_tied_model(myNodeName, model);
   
   # if (myNodeName!="") type=props.globals.getNode(myNodeName).getName();
@@ -1161,7 +1161,7 @@ var startSmoke = func (smokeType, myNodeName="", model="")
   if ((currFire != nil) and (currFire != "")) return currFire;
   
       
-  if (model==nil or model=="") model="AI/Aircraft/Fire-Particles/"~smokeType~"-particles.xml";
+  if (model==nil or model=="") model="Aircraft/Scenarios/Aircraft/Fire-Particles/"~smokeType~"-particles.xml";
   var fireNode=put_tied_model(myNodeName, model);
   
   
@@ -5236,10 +5236,10 @@ var mainAC_add_damage = func (damageRise=0, damageTotal=0, source="", message=""
 			# low vuls.damageVulnerability means a difficult, hardened target that should burn
 			# more vigorously once finally on fire)   
 			var fp="";                     			
-			if (vuls.explosiveMass_kg < 1000 ) { fp="AI/Aircraft/Fire-Particles/fire-particles-very-small.xml"; }
-			elsif (vuls.explosiveMass_kg > 5000 ) { fp="AI/Aircraft/Fire-Particles/fire-particles-small.xml"; }
-			elsif (vuls.explosiveMass_kg > 50000 ) { fp="AI/Aircraft/Fire-Particles/fire-particles-large.xml"; }
-			else {fp="AI/Aircraft/Fire-Particles/fire-particles.xml";} 
+			if (vuls.explosiveMass_kg < 1000 ) { fp="Aircraft/Scenarios/Aircraft/Fire-Particles/fire-particles-very-small.xml"; }
+			elsif (vuls.explosiveMass_kg > 5000 ) { fp="Aircraft/Scenarios/Aircraft/Fire-Particles/fire-particles-small.xml"; }
+			elsif (vuls.explosiveMass_kg > 50000 ) { fp="Aircraft/Scenarios/Aircraft/Fire-Particles/fire-particles-large.xml"; }
+			else {fp="Aircraft/Scenarios/Aircraft/Fire-Particles/fire-particles.xml";} 
 			
       startFire(myNodeName, fp); 
       #only one damage smoke at a time . . . 
@@ -5338,7 +5338,7 @@ var mp_send_damage = func (myNodeName="", damageRise=0 ) {
 }  
 
 ######################
-# fireAIWeapon_stop: turns off one of the triggers in AI/Aircraft/Fire-Particles/projectile-tracer.xml
+# fireAIWeapon_stop: turns off one of the triggers in Aircraft/Scenarios/Aircraft/Fire-Particles/projectile-tracer.xml
 #
 var fireAIWeapon_stop = func (id, myNodeName="") {
 
@@ -5350,7 +5350,7 @@ var fireAIWeapon_stop = func (id, myNodeName="") {
 }
 
 ######################
-# fireAIWeapon: turns on/off one of the triggers in AI/Aircraft/Fire-Particles/projectile-tracer.xml
+# fireAIWeapon: turns on/off one of the triggers in Aircraft/Scenarios/Aircraft/Fire-Particles/projectile-tracer.xml
 # Using the loopids ensures that it stays on for one full second are the last time it was
 # turned on.
 # 
@@ -7207,15 +7207,15 @@ var add_damage = func(damageRise, myNodeName, damagetype="weapon", impactNodeNam
 			# low vuls.damageVulnerability means a difficult, hardened target that should burn
 			# more vigorously once finally on fire)   
 			#var fp="";      
-			#if (vuls.explosiveMass_kg < 1000 ) { fp="AI/Aircraft/Fire-Particles/fire-particles-small.xml"; }
-			#elsif (vuls.explosiveMass_kg > 50000 ) { fp="AI/Aircraft/Fire-Particles/fire-particles-large.xml"; }
-			#else {fp="AI/Aircraft/Fire-Particles/fire-particles.xml";} 
+			#if (vuls.explosiveMass_kg < 1000 ) { fp="Aircraft/Scenarios/Aircraft/Fire-Particles/fire-particles-small.xml"; }
+			#elsif (vuls.explosiveMass_kg > 50000 ) { fp="Aircraft/Scenarios/Aircraft/Fire-Particles/fire-particles-large.xml"; }
+			#else {fp="Aircraft/Scenarios/Aircraft/Fire-Particles/fire-particles.xml";} 
 
       #small, med, large fire depending on size of hit that caused it			
 			var fp="";      
-			if (damageRise < 0.2 ) { fp="AI/Aircraft/Fire-Particles/fire-particles-very-small.xml"; }
-			elsif (damageRise > 0.5 ) { fp="AI/Aircraft/Fire-Particles/fire-particles.xml"; }
-			else {fp="AI/Aircraft/Fire-Particles/fire-particles-small.xml";}
+			if (damageRise < 0.2 ) { fp="Aircraft/Scenarios/Aircraft/Fire-Particles/fire-particles-very-small.xml"; }
+			elsif (damageRise > 0.5 ) { fp="Aircraft/Scenarios/Aircraft/Fire-Particles/fire-particles.xml"; }
+			else {fp="Aircraft/Scenarios/Aircraft/Fire-Particles/fire-particles-small.xml";}
       
       startFire(myNodeName, fp); 
       #only one damage smoke at a time . . . 
@@ -8221,7 +8221,7 @@ var weapons_init_func = func(myNodeName) {
       
    foreach (elem;keys (weaps) ) put_tied_weapon(myNodeName, elem,
         weaps[elem].weaponSize_m.start, weaps[elem].weaponSize_m.end,
-        "AI/Aircraft/Fire-Particles/projectile-tracer.xml");
+        "Aircraft/Scenarios/Aircraft/Fire-Particles/projectile-tracer.xml");
    debprint ("Weaps: ", myNodeName, " initialized ");
    #append(listenerids, listenerid);
    #props.globals.getNode(""~myNodeName~"/bombable/weapons/listenerids",1).setValues({listenerids: listenerids});

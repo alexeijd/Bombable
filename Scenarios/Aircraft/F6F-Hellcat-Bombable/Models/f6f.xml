@@ -178,7 +178,7 @@
   <!-- Une ombre pour OSG -->
   <model>
     <name>shadowOSG</name>
-    <path>AI/Aircraft/F6F-Hellcat-Bombable/Models/shadow.xml</path>
+    <path>Aircraft/Scenarios/Aircraft/F6F-Hellcat-Bombable/Models/shadow.xml</path>
   </model>
 
   <animation>
@@ -198,7 +198,7 @@
 
   <!-- Interior -->
   <model>
-    <path>AI/Aircraft/F6F-Hellcat-Bombable/Models/Interior/interior.xml</path>
+    <path>Aircraft/Scenarios/Aircraft/F6F-Hellcat-Bombable/Models/Interior/interior.xml</path>
     <offsets>
       <x-m> 0 </x-m>
       <y-m> 0 </y-m>
@@ -918,7 +918,7 @@
 
   <!-- Ajout des effets lumineux -->
   <model>
-    <path>AI/Aircraft/F6F-Hellcat-Bombable/Models/light/beacon.xml</path>
+    <path>Aircraft/Scenarios/Aircraft/F6F-Hellcat-Bombable/Models/light/beacon.xml</path>
     <offsets>
       <x-m> 4.406 </x-m>
       <y-m> 0.000 </y-m>
@@ -927,7 +927,7 @@
   </model>
 
   <model>
-    <path>AI/Aircraft/F6F-Hellcat-Bombable/Models/light/beacon.xml</path>
+    <path>Aircraft/Scenarios/Aircraft/F6F-Hellcat-Bombable/Models/light/beacon.xml</path>
     <offsets>
       <x-m> 1.147 </x-m>
       <y-m> 0.000 </y-m>
@@ -936,7 +936,7 @@
   </model>
 
   <model>
-    <path>AI/Aircraft/F6F-Hellcat-Bombable/Models/light/RedLight.xml</path>
+    <path>Aircraft/Scenarios/Aircraft/F6F-Hellcat-Bombable/Models/light/RedLight.xml</path>
     <offsets>
       <x-m> -2.056 </x-m>
       <y-m> -6.526 </y-m>
@@ -945,7 +945,7 @@
   </model>
 
   <model>
-    <path>AI/Aircraft/F6F-Hellcat-Bombable/Models/light/GreenLight.xml</path>
+    <path>Aircraft/Scenarios/Aircraft/F6F-Hellcat-Bombable/Models/light/GreenLight.xml</path>
     <offsets>
       <x-m> -2.056 </x-m>
       <y-m>  6.526 </y-m>
@@ -954,7 +954,7 @@
   </model>
 
   <model>
-    <path>AI/Aircraft/F6F-Hellcat-Bombable/Models/light/StrobeWhite.xml</path>
+    <path>Aircraft/Scenarios/Aircraft/F6F-Hellcat-Bombable/Models/light/StrobeWhite.xml</path>
     <offsets>
       <x-m> -2.016 </x-m>
       <y-m> -6.526 </y-m>
@@ -963,7 +963,7 @@
   </model>
 
   <model>
-    <path>AI/Aircraft/F6F-Hellcat-Bombable/Models/light/StrobeWhite.xml</path>
+    <path>Aircraft/Scenarios/Aircraft/F6F-Hellcat-Bombable/Models/light/StrobeWhite.xml</path>
     <offsets>
       <x-m> -2.016 </x-m>
       <y-m>  6.526 </y-m>

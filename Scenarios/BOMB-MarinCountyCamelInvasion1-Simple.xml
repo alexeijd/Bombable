@@ -23,7 +23,7 @@ Suggestion: Turn multiplayer mode off.  Marin Ranch is close to KSFO and you'll 
       <type>aircraft</type>
       <callsign>Fokker 1</callsign>
 			<name>Fokker1</name>
-      <model type="string">AI/Aircraft/fkdr1-Bombable/Models/dr1.xml</model>
+      <model type="string">Aircraft/Scenarios/Aircraft/fkdr1-Bombable/Models/dr1.xml</model>
       <latitude type="double">38.024</latitude>
 			<longitude type="double">-122.51</longitude>
 			<altitude type="double">170</altitude>
@@ -40,7 +40,7 @@ Suggestion: Turn multiplayer mode off.  Marin Ranch is close to KSFO and you'll 
       <type>aircraft</type>
       <callsign>Camel30</callsign>
 			<name>Camel30</name>        
-      <model type="string">AI/Aircraft/sopwithCamel-Bombable/Models/sopwithCamel-model.xml</model> 
+      <model type="string">Aircraft/Scenarios/Aircraft/sopwithCamel-Bombable/Models/sopwithCamel-model.xml</model> 
       <latitude type="double">38.0228950</latitude>
 			<longitude type="double">-122.4959</longitude>
 			<altitude type="double">159</altitude>
@@ -55,7 +55,7 @@ Suggestion: Turn multiplayer mode off.  Marin Ranch is close to KSFO and you'll 
       <type>aircraft</type>
       <callsign>SPAD3</callsign>
 			<name>SPAD3</name>
-      <model type="string">AI/Aircraft/SPAD-VII-Bombable/Models/spadvii.xml</model> 
+      <model type="string">Aircraft/Scenarios/Aircraft/SPAD-VII-Bombable/Models/spadvii.xml</model> 
       <latitude type="double">38.04</latitude>
 			<longitude type="double">-122.51</longitude>
 			<altitude type="double">305</altitude>

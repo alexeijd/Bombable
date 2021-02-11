@@ -3,7 +3,7 @@
 <PropertyList>
 
     <model>
-      <path>AI/AI/Aircraft/F6F-Hellcat-Bombable/Models/f6f.xml</path>
+      <path>Aircraft/Scenarios/Aircraft/F6F-Hellcat-Bombable/Models/f6f.xml</path>
       <livery>
         <file type="string">default</file>
       </livery>

@@ -55,7 +55,7 @@
         # "c:/Program Files/FlightGear/data/AI/M1-Abrams/m1.xml" - this is not 
         # only long & complex but will change depending on the system
         # FG is running on.          
-        aircraft.jeep_dlg_config = gui.Dialog.new("ai/jeep/config/dialog","AI/Aircraft/jeep-bombable/Dialogs/config.xml");
+        aircraft.jeep_dlg_config = gui.Dialog.new("ai/jeep/config/dialog","Aircraft/Scenarios/Aircraft/jeep-bombable/Dialogs/config.xml");
 				
 				#aircraft.jeep_dlg_config.toggle();
         

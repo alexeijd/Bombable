@@ -232,7 +232,7 @@
 
 
     <model> 
-      <path>AI/Aircraft/jeep-bombable/Models/pilot.xml</path>
+      <path>Aircraft/Scenarios/Aircraft/jeep-bombable/Models/pilot.xml</path>
 	  <name>pilot</name>
       <offsets> 
         <x-m>2.1</x-m>
@@ -253,7 +253,7 @@
   </condition>
  </animation>
 	<model> 
-      <path>AI/Aircraft/jeep-bombable/Models/roof.ac</path>
+      <path>Aircraft/Scenarios/Aircraft/jeep-bombable/Models/roof.ac</path>
 			<name>softroof</name>
       <offsets> 
         <x-m>0.0</x-m>
@@ -272,7 +272,7 @@
   </condition>
  </animation>
 	<model> 
-      <path>AI/Aircraft/jeep-bombable/Models/transparent.xml</path>
+      <path>Aircraft/Scenarios/Aircraft/jeep-bombable/Models/transparent.xml</path>
       <offsets> 
         <x-m>0.0</x-m>
         <y-m>0.0</y-m>
@@ -315,7 +315,7 @@
     
     	<!-- fire animations -->
 	<!-- model>
-		<path>AI/Aircraft/jeep-bombable/Models/Effects/fire-particles.xml</path>
+		<path>Aircraft/Scenarios/Aircraft/jeep-bombable/Models/Effects/fire-particles.xml</path>
 		<offsets>
 			<x-m>0.0</x-m>
 			<y-m>0.0</y-m>
