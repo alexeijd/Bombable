@@ -16,7 +16,7 @@ var main = func( addon ) {
 
 
     # load scripts
-    foreach(var f; ['bombable.nas'] ) {
-        io.load_nasal( root ~ "/FGData/Nasal/" ~ f, "bombable" );
-    }
+    #foreach(var f; ['bombable.nas'] ) {
+    #    io.load_nasal( root ~ "/FGData/Nasal/" ~ f, "bombable" );
+    #}
 }
