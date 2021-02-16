@@ -1,7 +1,7 @@
 #####################################################
 ## Bombable
 ## Brent Hugh, brent@brenthugh.com
-var bombableVersion = "4.6";
+var bombableVersion = "4.7.1";
 ## 
 ## Copyright (C) 2009 - 2011  Brent Hugh  (brent@brenthugh.com)
 ## This file is licensed under the GPL license version 2 or later.
@@ -8736,9 +8736,10 @@ print("Bombable: Bombable successfully set up and enabled for multiplayer dogfig
 #we do the setlistener to wait until various things in FG are initialized
 # which the functions etc in bombableInit depend on.  Then we wait an additional 15 seconds
 
-_setlistener("/sim/signals/nasal-dir-initialized", func {
+var fdm_init_listener = _setlistener("/sim/signals/fdm-initialized", func {
+  removelistener(fdm_init_listener);
 
-    #settimer (func {bombableInit()} , 5);
-    bombableInit();
+  bombableInit();
 
+  print("Bombable initalized");
 });
